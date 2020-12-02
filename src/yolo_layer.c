@@ -12,6 +12,7 @@
 
 layer make_yolo_layer(int batch, int w, int h, int n, int total, int *mask, int classes)
 {
+    // n是当前预测head所负责的box prior的种类数量，total总box prior种类数量
     int i;
     layer l = {0};
     l.type = YOLO;
